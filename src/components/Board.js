@@ -12,7 +12,6 @@ function Board() {
   
     useEffect(() => {
       checkWin();
-      checkTied();
     }, [board]);
   
     useEffect(() => {
@@ -34,6 +33,7 @@ function Board() {
       }else{
         setPlayer("X");
       }
+      checkTied();
     };
     const checkWin = () =>{
       Patterns.forEach((currPattern) =>{
